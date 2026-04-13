@@ -1,3 +1,4 @@
+import { HomeHotelsCarousel } from './home-hotels-carousel'
 import { HomeAbout } from './home-about'
 import { HomeExperience } from './home-experience'
 import { HomeHotel } from './home-hotel'
@@ -10,10 +11,9 @@ import { HomeFooter } from './home-footer'
 
 const NAV_LINKS = [
   { label: 'About', href: '#about' },
-  { label: 'Experience', href: '#experience' },
+  { label: 'Location', href: '#location' },
   { label: 'The Hotel', href: '#hotel' },
   { label: 'Apply', href: '#apply' },
-  { label: 'FAQ', href: '#faq' },
 ]
 
 export function HomeDetails() {
@@ -27,8 +27,8 @@ export function HomeDetails() {
           style={{ backgroundImage: 'url(/landing/images/background.png)' }}
         />
 
-        {/* ── Header — floats above centered content ── */}
-        <header className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between pl-[100px] pr-[132px] py-5 bg-[#0A0A0A]/80">
+        {/* ── Header ── */}
+        <header className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between pl-[100px] pr-[132px] py-5 bg-[#0A0A0A]/80 border-b border-[#27272A]">
           <img
             src="/header/nomadz-logo-white.svg"
             alt="NOMADZ"
@@ -50,62 +50,43 @@ export function HomeDetails() {
           </nav>
         </header>
 
-        {/* ── Hero content — vertically centered in full viewport ── */}
-        <main className="relative z-10 flex flex-col items-center justify-center h-full px-8 text-center">
+        {/* takes place of absolute header */}
+        <div
+          style={{
+            height: 24 + 20 + 20, // padding 20 top, content - 24, padding 20 bottom
+          }}
+        />
+
+        {/* ── Hero content — centered in viewport ── */}
+        <main className="relative z-10 h-[calc(100%-64px)] flex flex-col items-center justify-center px-8 text-center gap-6">
           <img
-            src="/landing/svgs/solana-hotel-heading.svg"
+            src="/landing/svgs/nfc-summit-logo.svg"
             alt="The Solana Hotel"
-            className="w-full max-w-[820px] mb-8"
+            className="w-full max-w-[470px]"
             draggable={false}
           />
 
-          <p className="mb-1 text-2xl font-light text-white">
-            A coliving hotel block for founders, builders &amp; ecosystem contributors
-          </p>
-          <p className="text-2xl text-white font-medium mb-[72px]">
+          <p className="text-2xl text-white font-medium">
             Lisbon, June 1–8, 2026
           </p>
+
+          {/* Hotel cards carousel */}
+          <div className="w-full max-w-6xl px-4">
+            <HomeHotelsCarousel />
+          </div>
 
           <div className="flex items-center gap-4">
             <a
               href="#apply"
-              className="text-sm font-bold uppercase w-[180px] sm:w-[200px] py-4 bg-[#F4F4F5] text-[#18181B] text-center"
+              className="text-sm font-bold uppercase w-[180px] sm:w-[200px] py-3 bg-[#F4F4F5] text-[#18181B] text-center"
             >
               Book Your Spot
             </a>
             <a
               href="#about"
-              className="border border-white text-white text-sm font-bold uppercase w-[164px] sm:w-[180px] py-4 text-center"
+              className="border border-white text-white text-sm font-bold uppercase w-[164px] sm:w-[180px] py-3 text-center"
             >
               Learn More
-            </a>
-          </div>
-
-          {/* ── Sponsor bar ── */}
-          <div className="flex items-center justify-center gap-4 sm:gap-7 px-8 mt-[92px]">
-            <a href="https://www.nfcsummit.com/" target="_blank" rel="noopener noreferrer">
-              <img
-                src="/landing/images/nfc-summit.png"
-                alt="NFC Summit"
-                className="h-6 sm:h-[35px] w-auto hover:scale-105 transition-transform"
-                draggable={false}
-              />
-            </a>
-            <a href="https://solana.org/" target="_blank" rel="noopener noreferrer">
-              <img
-                src="/landing/svgs/solana-foundation-logo.svg"
-                alt="Solana Foundation"
-                className="h-3.5 sm:h-6 w-auto hover:scale-105 transition-transform"
-                draggable={false}
-              />
-            </a>
-            <a href="https://monkedao.io/" target="_blank" rel="noopener noreferrer">
-              <img
-                src="/landing/images/monke-dao.png"
-                alt="Monke DAO"
-                className="h-3.5 sm:h-6 w-auto hover:scale-105 transition-transform"
-                draggable={false}
-              />
             </a>
           </div>
         </main>
