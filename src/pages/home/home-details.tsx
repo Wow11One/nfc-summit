@@ -1,4 +1,5 @@
 import { HomeHotelsCarousel } from './home-hotels-carousel'
+import { HomeNfc } from './home-nfc'
 import { HomeAbout } from './home-about'
 import { HomeExperience } from './home-experience'
 import { HomeHotel } from './home-hotel'
@@ -61,7 +62,7 @@ export function HomeDetails() {
         <main className="relative z-10 h-[calc(100%-64px)] flex flex-col items-center justify-center px-8 text-center gap-6">
           <img
             src="/landing/svgs/nfc-summit-logo.svg"
-            alt="The Solana Hotel"
+            alt="The NFC summit"
             className="w-full max-w-[470px]"
             draggable={false}
           />
@@ -71,7 +72,7 @@ export function HomeDetails() {
           </p>
 
           {/* Hotel cards carousel */}
-          <div className="w-full max-w-6xl px-4">
+          <div className="w-full max-w-[1200px] px-4">
             <HomeHotelsCarousel />
           </div>
 
@@ -93,14 +94,15 @@ export function HomeDetails() {
       </div>
 
       {/* ── Sections below the fold ── */}
+      <HomeNfc />
       <HomeAbout />
-      <HomeExperience />
+      {/* <HomeExperience />
       <HomeHotel />
       <HomeGallery />
       <HomeCommunity />
       <HomeReviews />
       <HomeApply />
-      <HomeFaq />
+      <HomeFaq /> */}
       <HomeFooter />
     </div>
   )
