@@ -48,10 +48,9 @@ export function HomeNfc() {
             <h2 className="font-medium uppercase text-6xl mb-4">The Venue</h2>
             <p className="text-white text-base sm:text-lg leading-relaxed max-w-[1220px]">
               NFC is taking place at Unicorn Factory Lisboa, Rua da Manutenção
-              119, Lisbon, Portugal.
+              118, Lisbon, Portugal.
               <br />
-              Located in the Beato district, the venue offers a modern
-              industrial space for talks, exhibitions, and networking.
+              Located in the Beato district, the venue offers a modern industrial space for talks, exhibitions, and networking.
             </p>
           </FadeUp>
 
@@ -82,21 +81,24 @@ export function HomeNfc() {
             {/* Transport */}
             <div className="flex flex-col gap-2 text-sm text-white/60 leading-relaxed">
               <p>
-                <span className="uppercase tracking-wide">
-                  AIRPORT:
-                </span>{' '}
-                Aeroporto Humberto Delgado - Lisbon, Portugal - ~15 min ride to the venue
+                <span className="uppercase tracking-wide">AIRPORT:</span>{' '}
+                Aeroporto Humberto Delgado - Lisbon, Portugal - ~15 min ride to
+                the venue
               </p>
-              <a className='underline underline-offset-2' href="https://www.nfcsummit.com/" target="_blank">
-                <span className="uppercase tracking-wide">
-                  Train:
-                </span>{' '}
-                Santa Apolónia Station - ~10 min drive
+              <a
+                className="underline underline-offset-2"
+                href="https://www.nfcsummit.com/"
+                target="_blank"
+              >
+                <span className="uppercase tracking-wide">Train:</span> Santa
+                Apolónia Station - ~10 min drive
               </a>
-              <a className='underline underline-offset-2' href="https://www.nfcsummit.com/" target="_blank">
-                <span className="uppercase tracking-wide">
-                  Parking:
-                </span>{' '}
+              <a
+                className="underline underline-offset-2"
+                href="https://www.nfcsummit.com/"
+                target="_blank"
+              >
+                <span className="uppercase tracking-wide">Parking:</span>{' '}
                 On-site and nearby street parking available in Beato area
               </a>
             </div>

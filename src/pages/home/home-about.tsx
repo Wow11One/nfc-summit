@@ -42,29 +42,52 @@ const FEATURES: FeatureCardProps[] = [
 
 export function HomeAbout() {
   return (
-    <section id="about" className="bg-[#161616] border border-[#272727] text-white pt-[72px] pb-[145px] flex items-center justify-center">
-      <div className='xl:max-w-[1104px]'>
+    <section
+      id="about"
+      className="border border-[#272727] text-white flex items-center justify-center xl:h-screen p-8"
+      style={{
+        backgroundImage: 'url(/landing/images/pull-bg.webp)',
+        backgroundPosition: 'center center',
+        backgroundSize: 'contain'
+      }}
+    >
+      <div className="xl:max-w-[1250px]">
         {/* Heading */}
-        <FadeUp className="text-center mb-12">
-          <h2 className="font-display font-bold text-[48px] uppercase mb-9 leading-[1.1]">
-            More than a hotel.
-            <br />A Solana Hub.
-          </h2>
-          <p className="text-[#9F9FA9] text-lg">
-            Nomadz is hosting a dedicated Solana coliving space during NFC Summit (4–6 June) – a
-            private hotel block exclusively for Solana founders, builders, and ecosystem contributors.
-            More than accommodation, it's a curated gathering point where the community eats, works,
-            exercises, and connects under one roof.
+        <FadeUp className="text-center flex flex-col items-center">
+          <img
+            src="/landing/svgs/solana-hotel-heading.svg"
+            alt="The Solana Hotel"
+            className="w-full max-w-[800px]"
+            draggable={false}
+          />
+          <p className="text-white text-2xl text-center my-10 font-light">
+            A coliving hotel block for founders, builders & ecosystem
+            contributors
+            <br />
+            <span className="font-medium">Lisbon, June 1-8, 2026</span>
           </p>
         </FadeUp>
 
         {/* Feature cards */}
         <div className="flex max-xl:items-center xl:justify-center gap-4 sm:gap-6 max-xl:flex-col">
           {FEATURES.map((feature, i) => (
-            <FadeUp key={feature.title} delay={i * 100} className="flex-1 max-w-[368px] w-full">
+            <FadeUp
+              key={feature.title}
+              delay={i * 100}
+              className="flex-1 max-w-[368px] w-full"
+            >
               <FeatureCard {...feature} />
             </FadeUp>
           ))}
+        </div>
+
+        <div className='mt-24 flex justify-center'>
+          <a
+            href="#about"
+            className="inline-flex items-center justify-center border border-white text-white text-sm font-bold uppercase w-[184px] h-[54px] py-3 text-center"
+          >
+            Learn More
+          </a>
         </div>
       </div>
     </section>
