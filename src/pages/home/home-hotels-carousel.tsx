@@ -231,43 +231,53 @@ export function HomeHotelsCarousel() {
   }, [totalSlides])
 
   return (
-    <div className="flex items-center gap-3 w-full">
-      {/* Left arrow */}
-      <button
-        onClick={handlePrev}
-        className="shrink-0 w-8 h-12 bg-[#262626]/80 hover:bg-[#262626] flex items-center justify-center transition-colors"
-        aria-label="Previous slide"
-      >
-        <CaretLeft weight="bold" className="text-white w-6 h-6" />
-      </button>
-
-      {/* Cards */}
-      <div className="overflow-hidden flex-1">
-        <div
-          className="flex transition-transform duration-300 ease-in-out"
-          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-        >
-          {groups.map((group, groupIndex) => (
-            <div
-              key={groupIndex}
-              className="flex-shrink-0 w-full grid grid-cols-3 gap-8"
-            >
-              {group.map(hotel => (
-                <HotelCard key={hotel.id} hotel={hotel} />
-              ))}
-            </div>
-          ))}
-        </div>
+    <>
+      {/* ── Mobile: 3 cards in a column ── */}
+      <div className="flex lg:hidden flex-col gap-8 items-center max-w-[400px] mx-auto w-full">
+        {HOTELS.slice(0, 3).map(hotel => (
+          <HotelCard key={hotel.id} hotel={hotel} />
+        ))}
       </div>
 
-      {/* Right arrow */}
-      <button
-        onClick={handleNext}
-        className="shrink-0 w-8 h-12 bg-[#262626]/80 hover:bg-[#262626] flex items-center justify-center transition-colors"
-        aria-label="Next slide"
-      >
-        <CaretRight weight="bold" className="text-white w-6 h-6" />
-      </button>
-    </div>
+      {/* ── Desktop: carousel with side arrows ── */}
+      <div className="hidden lg:flex items-center gap-3 w-full">
+        {/* Left arrow */}
+        <button
+          onClick={handlePrev}
+          className="shrink-0 w-8 h-12 bg-[#262626]/80 hover:bg-[#262626] flex items-center justify-center transition-colors"
+          aria-label="Previous slide"
+        >
+          <CaretLeft weight="bold" className="text-white w-6 h-6" />
+        </button>
+
+        {/* Cards */}
+        <div className="overflow-hidden flex-1">
+          <div
+            className="flex transition-transform duration-300 ease-in-out"
+            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+          >
+            {groups.map((group, groupIndex) => (
+              <div
+                key={groupIndex}
+                className="flex-shrink-0 w-full grid grid-cols-3 gap-10 lg:gap-8"
+              >
+                {group.map(hotel => (
+                  <HotelCard key={hotel.id} hotel={hotel} />
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Right arrow */}
+        <button
+          onClick={handleNext}
+          className="shrink-0 w-8 h-12 bg-[#262626]/80 hover:bg-[#262626] flex items-center justify-center transition-colors"
+          aria-label="Next slide"
+        >
+          <CaretRight weight="bold" className="text-white w-6 h-6" />
+        </button>
+      </div>
+    </>
   )
 }

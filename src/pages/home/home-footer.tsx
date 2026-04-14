@@ -111,7 +111,7 @@ export function HomeFooter() {
   }
 
   return (
-    <footer className="bg-[#101010] pt-12 pb-[124px] lg:pb-24 text-white">
+    <footer className="bg-[#101010] py-12 text-white">
       <div className="mx-auto max-lg:max-w-[780px] max-w-[1078px] px-5 sm:px-8">
 
         {/* Top row */}
