@@ -1,0 +1,28 @@
+services:
+  frontend:
+    image: barkas/nomadz-nfc-summit:frontend
+    platform: linux/amd64
+    build:
+      dockerfile: Dockerfile.production
+      args:
+        VITE_API_URL: ${VITE_API_URL}
+        VITE_SOLANA_HOTEL_URL: ${VITE_SOLANA_HOTEL_URL}
+    container_name: nomadz-nfc-summit-frontend
+    networks:
+      - nomadz-nfc-summit-network
+    env_file:
+      - ./env/.env.production
+    ports:
+      - ${DOCKER_EXTERNAL_FRONTEND_PORT}:4173
+    volumes:
+      - ./src:/app/src
+    deploy:
+      resources:
+        limits:
+          memory: 6144M
+    restart: on-failure
+
+networks:
+  nomadz-nfc-summit-network:
+    driver: bridge
+    name: nomadz-nfc-summit-network

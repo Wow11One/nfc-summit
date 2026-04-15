@@ -6,11 +6,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prod": "docker compose up -d --build",
-    "build": "tsc -b && vite build",
+    "build": "tsc --noEmit && vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "format": "prettier --write ."
+    "preview": "serve -s dist -l 4173",
+    "format": "prettier --write .",
+    "start:build:docker:production": "docker compose --env-file=./env/.env.production -f docker-compose.production.yml up --build -d",
+    "build:docker:production": "docker compose --env-file=./env/.env.production -f docker-compose.production.yml build --no-cache",
+    "start:docker:production": "docker compose --env-file=./env/.env.production -f docker-compose.production.yml up -d",
+    "stop:docker:production": "docker compose --env-file=./env/.env.production -f docker-compose.production.yml down"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.7",
@@ -18,10 +21,14 @@
     "axios": "^1.7.9",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.28.0"
+    "react-router-dom": "^6.28.0",
+    "serve": "^14.2.6"
   },
   "pnpm": {
-    "onlyBuiltDependencies": ["@swc/core", "esbuild"]
+    "onlyBuiltDependencies": [
+      "@swc/core",
+      "esbuild"
+    ]
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",

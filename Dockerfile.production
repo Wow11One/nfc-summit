@@ -1,0 +1,44 @@
+FROM node:21-alpine AS base
+
+ENV PNPM_HOME=/usr/local/bin
+
+# Build stage
+FROM base AS build
+WORKDIR /app
+
+RUN apk add --no-cache --virtual .gyp linux-headers python3 make g++ eudev-dev
+RUN corepack enable && corepack prepare pnpm@latest --activate
+
+COPY package*.json ./
+COPY pnpm-lock.yaml ./
+
+RUN pnpm install tiny-secp256k1 buffer process url stream-browserify assert crypto-browserify os-browserify
+RUN pnpm install --frozen-lockfile || npm install --production
+RUN (pnpm install --global @nestjs/cli && pnpm install --save-dev @types/node) \
+|| (npm install --global @nestjs/cli && npm install --save-dev@types/node)
+
+COPY . .
+
+RUN pnpm run build || npm run build
+
+ENV CI=true
+RUN pnpm prune || npm prune
+
+USER node
+
+# Production stage 
+FROM base AS production
+WORKDIR /app
+
+RUN corepack enable && corepack prepare pnpm@latest --activate
+
+ENV NODE_ENV production
+
+COPY --chown=node:node --from=build /app/package.json /app/pnpm-lock.yaml ./
+COPY --chown=node:node --from=build /app/node_modules ./node_modules
+COPY --chown=node:node --from=build /app/dist ./dist
+
+CMD ["sh", "-c", "NODE_OPTIONS='--max-old-space-size=6144' pnpm run preview"]
+
+EXPOSE 4173
+
