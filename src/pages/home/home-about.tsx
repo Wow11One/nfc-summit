@@ -1,7 +1,6 @@
 import { Buildings, UsersThree, TreePalm, type Icon } from '@phosphor-icons/react'
 import { useIconGradient } from '@/utils/iconGradient'
 import { FadeUp } from '@/utils/FadeUp'
-import { useEffect, useState } from 'react'
 
 interface FeatureCardProps {
   Icon: Icon
@@ -44,7 +43,7 @@ const FEATURES: FeatureCardProps[] = [
 export function HomeAbout() {
   return (
     <section
-      id="about"
+      id="apply"
       className="border border-[#272727] text-white flex items-center justify-center xl:h-screen p-8 bg-no-repeat bg-cover"
       style={{
         backgroundImage: 'url(/landing/images/pull-bg.webp)',
@@ -71,8 +70,8 @@ export function HomeAbout() {
               A coliving hotel block for founders, builders & ecosystem
               contributors
             </span>
-            <br className='' />
-            <span className="font-medium">Lisbon, June 1-8, 2026</span>
+            <br className="" />
+            <span className="font-medium">June 1-8, Lisbon</span>
           </p>
         </FadeUp>
 
@@ -91,7 +90,9 @@ export function HomeAbout() {
 
         <div className="mt-12 lg:mt-24 flex justify-center">
           <a
-            href="#about"
+            href={import.meta.env.VITE_SOLANA_HOTEL_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center border border-white text-white text-sm font-bold uppercase w-full max-w-[420px] lg:max-w-[184px] h-[54px] py-3 text-center"
           >
             Learn More

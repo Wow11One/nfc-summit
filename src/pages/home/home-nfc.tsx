@@ -1,10 +1,14 @@
+import { NOMADZ_EVENT_URL } from '@/utils/constants'
 import { FadeUp } from '@/utils/FadeUp'
 
 export function HomeNfc() {
   return (
     <>
       {/* ── NFC Conference ── */}
-      <section className="bg-[#000704] text-white px-8 sm:px-10 xl:px-[132px] py-14 sm:py-20 border-t border-[#27272A]">
+      <section
+        id="about"
+        className="bg-[#000704] text-white px-8 sm:px-10 xl:px-[132px] py-14 sm:py-20 border-t border-[#27272A]"
+      >
         <div className="mx-auto flex flex-col lg:flex-row items-center gap-8 lg:gap-16 max-w-[1250px]">
           {/* Left: image with button overlay */}
           <FadeUp className="w-full lg:w-[610px] shrink-0 relative group">
@@ -23,7 +27,7 @@ export function HomeNfc() {
 
             <div className="absolute top-0 left-0 lg:block hidden">
               <a
-                href="https://www.nfcsummit.com/"
+                href={NOMADZ_EVENT_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border border-white text-white inline-flex items-center justify-center text-center text-xs font-bold uppercase px-4 py-2.5 tracking-[0.1em] hover:bg-white/10 transition-colors w-[184px] h-[54px]"
@@ -44,9 +48,11 @@ export function HomeNfc() {
               unprecedented ways.
             </p>
 
-            <div className='flex justify-center'>
+            <div className="flex justify-center">
               <a
-                href="#apply"
+                href={NOMADZ_EVENT_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-6 text-sm font-bold uppercase w-full max-w-[480px] lg:hidden py-4 bg-[#F4F4F5] text-[#18181B] text-center"
               >
                 Book Your Spot
@@ -57,7 +63,10 @@ export function HomeNfc() {
       </section>
 
       {/* ── The Venue ── */}
-      <section className="bg-[#000704] text-white px-8 sm:px-10 xl:px-[132px] pb-14 sm:pb-20">
+      <section
+        id="location"
+        className="bg-[#000704] text-white px-8 sm:px-10 xl:px-[132px] pb-14 sm:pb-20"
+      >
         <div className="mx-auto max-w-[1250px]">
           {/* Heading + description */}
           <FadeUp className="mb-8">
@@ -89,7 +98,7 @@ export function HomeNfc() {
               />
             </div>
             <a
-              href="https://www.nfcsummit.com/"
+              href={NOMADZ_EVENT_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="w-[254px] h-[52px] absolute bottom-0 right-0 bg-white text-black hidden lg:inline-flex items-center justify-center text-xs font-bold uppercase px-8 py-4 tracking-[0.1em] hover:bg-white/90 transition-colors"
@@ -101,11 +110,13 @@ export function HomeNfc() {
           {/* Footer info */}
           <FadeUp
             delay={150}
-            className="mt-7 flex flex-col-reverse sm:flex-row justify-between gap-6 sm:gap-10"
+            className="mt-7 flex flex-col-reverse lg:flex-row justify-between gap-6 sm:gap-10"
           >
-            <div className='flex justify-center'>
+            <div className="flex justify-center lg:hidden">
               <a
-                href="#apply"
+                href={NOMADZ_EVENT_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-6 text-sm font-bold uppercase w-full max-w-[480px] lg:hidden py-4 bg-[#F4F4F5] text-[#18181B] text-center"
               >
                 Book Your Spot

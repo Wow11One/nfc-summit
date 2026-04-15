@@ -10,6 +10,7 @@ import { HomeAbout } from './home-about'
 // import { HomeFaq } from './home-faq'
 import { HomeFooter } from './home-footer'
 import { useEffect, useState } from 'react'
+import { NOMADZ_EVENT_URL } from '@/utils/constants'
 
 const NAV_LINKS = [
   { label: 'About', href: '#about' },
@@ -137,11 +138,11 @@ export function HomeDetails() {
         </header>
 
         <div className="lg:hidden flex w-full absolute top-0 left-0 right-0 z-20 items-center justify-center mt-10">
-            <img
-              src="/header/nomadz-logo-white.svg"
-              alt="NOMADZ"
-              className="w-auto h-6"
-            />
+          <img
+            src="/header/nomadz-logo-white.svg"
+            alt="NOMADZ"
+            className="w-auto h-6"
+          />
         </div>
 
         {/* takes place of absolute header */}
@@ -161,7 +162,7 @@ export function HomeDetails() {
           />
 
           <p className="text-xl lg:text-2xl text-white font-medium">
-            Lisbon, June 1–8, 2026
+            4-6 June, Lisbon
           </p>
 
           {/* Hotel cards carousel */}
@@ -171,13 +172,17 @@ export function HomeDetails() {
 
           <div className="flex lg:flex-row flex-col items-center gap-4 lg:pb-0 pb-8 lg:w-auto w-full">
             <a
-              href="#apply"
+              href={NOMADZ_EVENT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-sm font-bold uppercase w-full max-w-[420px] lg:w-[204px] py-3 bg-[#F4F4F5] text-[#18181B] text-center"
             >
               Book Your Spot
             </a>
             <a
-              href="#about"
+              href={NOMADZ_EVENT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="border border-white text-white text-sm font-bold uppercase w-full max-w-[420px] lg:w-[204px] py-3 text-center"
             >
               Learn More
