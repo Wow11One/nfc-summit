@@ -43,7 +43,7 @@ const FEATURES: FeatureCardProps[] = [
 export function HomeAbout() {
   return (
     <section
-      id="apply"
+      id="hotel"
       className="border border-[#272727] text-white flex items-center justify-center xl:h-screen p-8 bg-no-repeat bg-cover"
       style={{
         backgroundImage: 'url(/landing/images/pull-bg.webp)',

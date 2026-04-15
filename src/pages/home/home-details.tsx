@@ -16,7 +16,6 @@ const NAV_LINKS = [
   { label: 'About', href: '#about' },
   { label: 'Location', href: '#location' },
   { label: 'The Hotel', href: '#hotel' },
-  { label: 'Apply', href: '#apply' },
 ]
 
 export function HomeDetails() {

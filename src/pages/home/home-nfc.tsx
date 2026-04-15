@@ -43,9 +43,7 @@ export function HomeNfc() {
               Non Fungible Conference
             </h2>
             <p className="text-white/65 text-base sm:text-lg leading-relaxed">
-              When Creative economy meet Web 3. Art Fashion, Gaming, and music,
-              live performance stage, blending virtual and reality in
-              unprecedented ways.
+              When Creative economy meet Web 3. Art Fashion, Gaming, and music, live performance stage, blending virtual and reality in unprecedented ways.
             </p>
 
             <div className="flex justify-center">
@@ -125,26 +123,22 @@ export function HomeNfc() {
 
             {/* Transport */}
             <div className="flex flex-col gap-2 text-sm text-white/60 leading-relaxed">
-              <p>
+              <a
+                className="underline underline-offset-2"
+                href="https://maps.app.goo.gl/mdutRtCahYfw9U267"
+                target="_blank"
+              >
                 <span className="uppercase tracking-wide">AIRPORT:</span>{' '}
                 Aeroporto Humberto Delgado - Lisbon, Portugal - ~15 min ride to
                 the venue
-              </p>
+              </a>
               <a
                 className="underline underline-offset-2"
-                href="https://www.nfcsummit.com/"
+                href="https://maps.app.goo.gl/StSERS29KNs4dX2X6"
                 target="_blank"
               >
                 <span className="uppercase tracking-wide">Train:</span> Santa
                 Apolónia Station - ~10 min drive
-              </a>
-              <a
-                className="underline underline-offset-2"
-                href="https://www.nfcsummit.com/"
-                target="_blank"
-              >
-                <span className="uppercase tracking-wide">Parking:</span>{' '}
-                On-site and nearby street parking available in Beato area
               </a>
             </div>
 

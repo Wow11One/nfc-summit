@@ -204,7 +204,7 @@ function HotelCard({ hotel }: { hotel: Hotel }) {
 
 function SkeletonCard() {
   return (
-    <div className="bg-[#151515]/90 border border-[#27272A] flex flex-col animate-pulse">
+    <div className="bg-[#151515]/90 border border-[#27272A] flex flex-col animate-pulse w-full">
       <div className="aspect-[371/248] bg-[#2a2a2a]" />
       <div className="p-4 flex flex-col gap-3">
         <div className="h-4 bg-[#2a2a2a] rounded w-3/4" />
