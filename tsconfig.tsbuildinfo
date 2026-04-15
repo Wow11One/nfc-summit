@@ -1,0 +1,30 @@
+{
+    "root": [
+        "./src/app.tsx",
+        "./src/main.tsx",
+        "./src/router.tsx",
+        "./src/components/solanaicon.tsx",
+        "./src/constants/applicationform.ts",
+        "./src/pages/home/home-about.tsx",
+        "./src/pages/home/home-apply.tsx",
+        "./src/pages/home/home-community.tsx",
+        "./src/pages/home/home-details.tsx",
+        "./src/pages/home/home-experience.tsx",
+        "./src/pages/home/home-faq.tsx",
+        "./src/pages/home/home-footer.tsx",
+        "./src/pages/home/home-gallery.tsx",
+        "./src/pages/home/home-hotel.tsx",
+        "./src/pages/home/home-hotels-carousel.tsx",
+        "./src/pages/home/home-nfc.tsx",
+        "./src/pages/home/home-page.tsx",
+        "./src/pages/home/home-provider.tsx",
+        "./src/pages/home/home-reviews.tsx",
+        "./src/queries/home.queries.ts",
+        "./src/utils/fadeup.tsx",
+        "./src/utils/axios.ts",
+        "./src/utils/constants.ts",
+        "./src/utils/icongradient.tsx",
+        "./vite.config.ts"
+    ],
+    "version": "5.7.2"
+}

@@ -1,0 +1,11 @@
+services:
+  nfc-fe:
+    container_name: nomadz-nfc-summit
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - ./env/.env
+    ports:
+      - "${APP_PORT:-8080}:4173"
+    restart: unless-stopped

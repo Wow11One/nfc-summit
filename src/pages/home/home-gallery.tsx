@@ -141,13 +141,6 @@ const ALL_IMAGES = [
 ]
 
 // ── Icon helpers ─────────────────────────────────────────────────────────────
-function IconClose() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-      <path d="M15 5L5 15M5 5l10 10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-    </svg>
-  )
-}
 function IconLeft() {
   return (
     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
