@@ -1,1 +1,1 @@
-# NOMADZ-solana-hotel
+# NOMADZ-NFC-summit
