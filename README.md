@@ -18,4 +18,4 @@ Build:
 pnpm build
 ```
 
-.env files need to be added with correct values
+.env file needs to be added with correct values
