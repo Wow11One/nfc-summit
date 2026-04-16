@@ -30,7 +30,7 @@ export function HomeNfc() {
                 href={NOMADZ_EVENT_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border border-white text-white inline-flex items-center justify-center text-center text-xs font-bold uppercase px-4 py-2.5 tracking-[0.1em] hover:bg-white/10 transition-colors w-[184px] h-[54px]"
+                className="border border-white text-white inline-flex items-center justify-center text-center text-xs font-bold uppercase px-4 py-2.5 tracking-[0.1em] transition-all hover:scale-105 w-[184px] h-[54px]"
               >
                 Learn More
               </a>
@@ -51,7 +51,7 @@ export function HomeNfc() {
                 href={NOMADZ_EVENT_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 text-sm font-bold uppercase w-full max-w-[480px] lg:hidden py-4 bg-[#F4F4F5] text-[#18181B] text-center"
+                className="mt-6 text-sm font-bold uppercase w-full max-w-[480px] lg:hidden py-4 bg-[#F4F4F5] text-[#18181B] text-center transition-all hover:scale-105"
               >
                 Book Your Spot
               </a>
@@ -99,7 +99,7 @@ export function HomeNfc() {
               href={NOMADZ_EVENT_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-[254px] h-[52px] absolute bottom-0 right-0 bg-white text-black hidden lg:inline-flex items-center justify-center text-xs font-bold uppercase px-8 py-4 tracking-[0.1em] hover:bg-white/90 transition-colors"
+              className="w-[254px] h-[52px] absolute bottom-0 right-0 bg-white text-black hidden lg:inline-flex items-center justify-center text-xs font-bold uppercase px-8 py-4 tracking-[0.1em] transition-all hover:scale-105"
             >
               BOOK YOUR SPOT
             </a>
@@ -115,7 +115,7 @@ export function HomeNfc() {
                 href={NOMADZ_EVENT_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 text-sm font-bold uppercase w-full max-w-[480px] lg:hidden py-4 bg-[#F4F4F5] text-[#18181B] text-center"
+                className="mt-6 text-sm font-bold uppercase w-full max-w-[480px] lg:hidden py-4 bg-[#F4F4F5] text-[#18181B] text-center transition-all hover:scale-105"
               >
                 Book Your Spot
               </a>

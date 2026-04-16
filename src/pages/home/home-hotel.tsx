@@ -57,7 +57,7 @@ export function HomeHotel() {
           <div>
             <a
               href="#apply"
-              className="inline-block bg-[#F4F4F5] text-[#18181B] text-sm font-bold uppercase px-8 py-4 hover:bg-white/85 transition-colors"
+              className="inline-block bg-[#F4F4F5] text-[#18181B] text-sm font-bold uppercase px-8 py-4 transition-all hover:scale-105"
             >
               Book Your Room
             </a>

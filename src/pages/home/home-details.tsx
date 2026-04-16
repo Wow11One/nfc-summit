@@ -174,7 +174,7 @@ export function HomeDetails() {
               href={NOMADZ_EVENT_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-bold uppercase w-full max-w-[420px] lg:w-[204px] py-3 bg-[#F4F4F5] text-[#18181B] text-center"
+              className="text-sm font-bold uppercase w-full max-w-[420px] lg:w-[204px] py-3 bg-[#F4F4F5] text-[#18181B] text-center transition-all hover:scale-105"
             >
               Book Your Spot
             </a>
@@ -182,7 +182,7 @@ export function HomeDetails() {
               href={NOMADZ_EVENT_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="border border-white text-white text-sm font-bold uppercase w-full max-w-[420px] lg:w-[204px] py-3 text-center"
+              className="border border-white text-white text-sm font-bold uppercase w-full max-w-[420px] lg:w-[204px] py-3 text-center transition-all hover:scale-105"
             >
               Learn More
             </a>

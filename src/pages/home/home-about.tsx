@@ -93,7 +93,7 @@ export function HomeAbout() {
             href={import.meta.env.VITE_SOLANA_HOTEL_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center border border-white text-white text-sm font-bold uppercase w-full max-w-[420px] lg:max-w-[184px] h-[54px] py-3 text-center"
+            className="inline-flex items-center justify-center border border-white text-white text-sm font-bold uppercase w-full max-w-[420px] lg:max-w-[184px] h-[54px] py-3 text-center transition-all hover:scale-105"
           >
             Learn More
           </a>

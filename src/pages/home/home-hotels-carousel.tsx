@@ -29,7 +29,7 @@ interface SearchResponse {
 }
 
 const redirectToNomadz = (ratestellarId: string) =>
-  `https://nomadz.xyz/property/${ratestellarId}?checkIn=2026-06-03&checkOut=2026-06-07&occupancies=1-`
+  `https://nomadz.xyz/property/${ratestellarId}?checkIn=2026-06-03&checkOut=2026-06-07&occupancies=1-&referralCode=NFC`
 
 // ── API ────────────────────────────────────────────────────────────────────
 
