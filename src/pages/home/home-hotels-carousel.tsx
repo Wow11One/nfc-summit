@@ -166,10 +166,10 @@ function HotelCard({ hotel }: { hotel: Hotel }) {
   console.log('hotel', hotel)
   return (
     <div
-      className="bg-[#151515]/90 backdrop-blur-sm border border-[#27272A] flex flex-col cursor-pointer"
+      className="bg-[#151515]/90 backdrop-blur-sm border border-[#27272A] flex flex-col cursor-pointer w-full"
       onClick={() => window.open(redirectToNomadz(hotel.ratestellarId), "_blank", "noopener,noreferrer")}    
     >
-      <HotelImageCarousel images={hotel.images?.slice(0, 10) || []} name={hotel.name} />
+      <HotelImageCarousel images={hotel.images?.slice(0, 8) || []} name={hotel.name} />
 
       <div className="p-4 flex flex-col gap-2 flex-1">
         <span className="text-white text-sm font-medium line-clamp-2 leading-snug flex-1 text-left">

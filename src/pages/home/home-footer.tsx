@@ -111,7 +111,7 @@ export function HomeFooter() {
   }
 
   return (
-    <footer className="bg-[#101010] py-12 text-white">
+    <footer className="bg-[#101010] pt-12 pb-[124px] lg:pb-24 text-white">
       <div className="mx-auto max-lg:max-w-[780px] max-w-[1078px] px-5 sm:px-8">
 
         {/* Top row */}
@@ -186,7 +186,7 @@ export function HomeFooter() {
               </div>
 
               {/* Social */}
-              <div className="flex flex-col gap-4 justify-between border-[#292929] grow max-md:w-full max-md:mb-6 max-md:py-6 max-md:border-y max-md:-mx-8 max-md:px-8">
+              <div className="flex flex-col gap-4 justify-between border-[#292929] grow max-md:w-full max-md:mb-6 max-md:py-6 max-md:border-y max-md:-mr-5 max-md:-ml-5 max-md:px-4 max-w-[100vw]">
                 <div className="space-y-8">
                   <p className="font-medium tracking-wide text-white uppercase lg:text-end">Social</p>
                   <div className="grid grid-cols-5 gap-4 lg:ml-auto w-fit">
